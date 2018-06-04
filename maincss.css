@@ -1,0 +1,27 @@
+#nav-bar{
+ 
+}
+
+/* #logocontainer {
+ max-width: 10px;
+} */
+#logoimage {
+ width: 100px;
+}
+.optionscontainer {
+ /* background-color: lightblue; */
+}
+.optionscontainer a{
+ float: left;
+ padding: 10px;
+ font-size: 1.1em;
+ text-decoration: none;
+ color: #000;
+ display: block;
+ transition: .3s background-color; /*What does this do?*/
+}
+.optionscontainer a:hover {
+ background-color: grey;
+ color:white;
+}
+
