@@ -4,8 +4,11 @@
 #logoimage {
  width: 100px;
 }
-.optionscontainer {
- /* background-color: lightblue; */
+.menu{
+ display: flex;
+ justify-content: left;
+ align-items: center;
+ flex-direction: row;
 }
 .optionscontainer a{
  float: left;
