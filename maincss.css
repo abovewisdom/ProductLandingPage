@@ -23,4 +23,29 @@
  background-color: grey;
  color:white;
 }
+.tmiddle {
+ background-color: green;
+}
+.dmiddle {
+
+ background-color: red;
+}
+.pmiddle {
+
+ background-color: yellow;
+}
+.producttitle {
+    text-align: center;
+    font-size: 1.5em;
+    color: blue;
+}
+h1 {
+  font-size: 1.5em;
+  padding-left: 5px;
+}
+#video{
+    height: 90vh;
+    width: 90vw;
+    float: center;
+}
 
