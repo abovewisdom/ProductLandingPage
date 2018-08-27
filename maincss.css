@@ -1,14 +1,57 @@
-#nav-bar{
- 
+/*For large screens*/
+:root {
+    --menu-justify-content: left;
+    --menu-flex-direction: row;
+    --gridtemplate:
+    "head head"
+    "title title"
+    "video description"
+    "pricing pricing"
+    "footer footer";
+}
+
+@media (max-width: 399px){ 
+  tmiddle {
+      background-color: blue;
+  }
+  :root {
+    --menu-justify-content: center;
+    --menu-flex-direction: column; 
+    --gridtemplate:
+    "head"
+    "title"
+    "video"
+    "description"
+    "pricing"
+    "footer"; 
+  }
+  .optionscontainer a {
+  display: block;
+
+  }
+} 
+
+body{
+  display:grid;
+  grid-template-areas: var(--gridtemplate);
+  align-content: start;
+  max-width: 700px;
+  margin: auto;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  grid-gap: 5px;
+}
+header {
+ grid-area: head;
 }
 #header-image {
  width: 100px;
 }
 .menu{
  display: flex;
- justify-content: left;
+ justify-content: var(--menu-justify-content);
  align-items: center;
- flex-direction: row;
+ flex-direction: var(--menu-flex-direction);
 }
 .optionscontainer a{
  float: left;
@@ -16,36 +59,40 @@
  font-size: 1.1em;
  text-decoration: none;
  color: #000;
- display: block;
  transition: .3s background-color; /*What does this do?*/
 }
 .optionscontainer a:hover {
  background-color: grey;
  color:white;
 }
-.tmiddle {
+ptitle {
+    grid-area: title;
+    background-color:orange;
+}
+tmiddle {
  background-color: green;
+ max-width: 400px;
+ grid-area: video;
 }
-.dmiddle {
-
+dmiddle {
  background-color: red;
+ grid-area: description;
 }
-.pmiddle {
-
+pmiddle {
  background-color: yellow;
+ grid-area: pricing;
+}
+footer {
+ background-color: purple;
+ grid-area: footer;
 }
 .producttitle {
     text-align: center;
     font-size: 1.5em;
     color: blue;
 }
-h1 {
-  font-size: 1.5em;
-  padding-left: 5px;
-}
 #video{
-    height: 90vh;
-    width: 90vw;
+    max-width: 100%;
     float: center;
 }
 
