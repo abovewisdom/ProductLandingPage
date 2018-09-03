@@ -2,7 +2,11 @@
 :root {
     --menu-justify-content: left;
     --menu-flex-direction: row;
-    --gridtemplate:
+    --title-bgcolor: #3F6D8E;
+    --desc-bgcolor: #658DA9;
+    --price-bgcolor: #154465;
+    --foot-bgcolor:  #052D4A;
+    --gridtemplate: 
     "head head"
     "title title"
     "video description"
@@ -11,10 +15,11 @@
 }
 
 @media (max-width: 399px){ 
-  tmiddle {
-      background-color: blue;
-  }
   :root {
+    --title-bgcolor: #3F6D8E;
+    --desc-bgcolor: #658DA9;
+    --price-bgcolor: #154465;
+    --foot-bgcolor:  #052D4A;
     --menu-justify-content: center;
     --menu-flex-direction: column; 
     --gridtemplate:
@@ -27,15 +32,13 @@
   }
   .optionscontainer a {
   display: block;
-
   }
 } 
 
-body{
+body {
   display:grid;
   grid-template-areas: var(--gridtemplate);
   align-content: start;
-  max-width: 700px;
   margin: auto;
   font-size: 1em;
   font-family: 'Open Sans', sans-serif;
@@ -53,43 +56,48 @@ header {
  align-items: center;
  flex-direction: var(--menu-flex-direction);
 }
-.optionscontainer a{
+.optionscontainer a {
  float: left;
  padding: 10px;
  font-size: 1.1em;
  text-decoration: none;
  color: #000;
- transition: .3s background-color; /*What does this do?*/
+ transition: .3s background-color; 
 }
 .optionscontainer a:hover {
  background-color: grey;
  color:white;
 }
 ptitle {
-    grid-area: title;
-    background-color:orange;
+ grid-area: title;
+ background-color: var(--title-bgcolor);
+ height: 25vh;
 }
 tmiddle {
- background-color: green;
+ background-color: var(--desc-bgcolor);
  max-width: 400px;
  grid-area: video;
+ height: 40vh;
 }
 dmiddle {
- background-color: red;
  grid-area: description;
+ background-color: var(--desc-bgcolor);
+ height: 40vh;
 }
 pmiddle {
- background-color: yellow;
+ background-color: var(--price-bgcolor);
  grid-area: pricing;
+ height: 100vh;
 }
 footer {
- background-color: purple;
+ background-color: var(--foot-bgcolor);
  grid-area: footer;
+ height: 10vh;
 }
 .producttitle {
     text-align: center;
-    font-size: 1.5em;
-    color: blue;
+    font-size: 8em;
+    color: white;
 }
 #video{
     max-width: 100%;
